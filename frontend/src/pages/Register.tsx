@@ -33,7 +33,7 @@ const Register = () => {
   return (
     <div className="auth-page">
       <div className="auth-container">
-        <h1>Wafer Todo</h1>
+        <h1>Todo Application</h1>
         <p>Register</p>
         <form onSubmit={handleRegister}>
           <input

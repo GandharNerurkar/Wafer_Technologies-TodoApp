@@ -38,7 +38,7 @@ const Login = () => {
   return (
     <div className="auth-page">
       <div className="auth-container">
-        <h1>Wafer Todo</h1>
+        <h1>Todo Application</h1>
         <p>Login</p>
         <form onSubmit={handleLogin}>
           <input
