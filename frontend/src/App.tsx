@@ -8,7 +8,6 @@ import AddTask from "./pages/AddTask"
 import ViewTask from "./pages/ViewTask"
 import { useTheme } from "./context/themeContext"
 
-
 const App = () => {
   const { theme, toggleTheme } = useTheme()
 
@@ -21,9 +20,26 @@ const App = () => {
         aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
       >
         {theme === "light" ? "Dark Mode" : "Light Mode"}
-        {/* {theme === "light" ? "🌙" : "🌞"} */}
       </button>
-      <Toaster position="top-center" reverseOrder={false} />
+
+      <Toaster
+        position="top-right"
+        reverseOrder={false}
+        gutter={10}
+        containerStyle={{ top: 16, right: 16 }}
+        toastOptions={{
+          className: "modern-toast",
+          duration: 3000,
+          success: {
+            className: "modern-toast modern-toast-success",
+          },
+          error: {
+            className: "modern-toast modern-toast-error",
+            duration: 3800,
+          },
+        }}
+      />
+
       <Routes>
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />

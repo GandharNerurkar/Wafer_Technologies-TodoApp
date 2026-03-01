@@ -5,7 +5,7 @@ Users can register, login, create, update, delete, search, and filter tasks.
 Authentication is handled with JWT, and only logged-in users can manage their own tasks.
 
 ## Live Demo
-[WaferTodo Live App](https://wafer-technologies-todo-app.vercel.app/)
+[WaferTodo Live](https://wafer-technologies-todo-app.vercel.app/)
 
 ## Tech Stack
 
