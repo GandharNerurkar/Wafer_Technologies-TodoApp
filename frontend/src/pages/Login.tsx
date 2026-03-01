@@ -36,25 +36,27 @@ const Login = () => {
   };
 
   return (
-    <div className="auth-container">
-      <h1>Wafer Todo</h1>
-      <p>Login</p>
-      <form onSubmit={handleLogin}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button type="submit">{isLoading ? "Logging in..." : "Login"}</button>
-        <Link to="/register">Don't have an account? Register</Link>
-      </form>
+    <div className="auth-page">
+      <div className="auth-container">
+        <h1>Wafer Todo</h1>
+        <p>Login</p>
+        <form onSubmit={handleLogin}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button type="submit">{isLoading ? "Logging in..." : "Login"}</button>
+          <Link to="/register">Don't have an account? Register</Link>
+        </form>
+      </div>
     </div>
   );
 };

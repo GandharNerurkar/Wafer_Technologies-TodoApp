@@ -6,7 +6,6 @@ import toast from "react-hot-toast";
 import { validateRegisterForm } from "../utils/validate";
 import "../styles/formstyles.css";
 
-
 const Register = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -26,38 +25,39 @@ const Register = () => {
       navigate("/login");
     } catch (error: any) {
       toast.error(error.response?.data?.message);
-    }
-    finally {
+    } finally {
       setIsLoading(false);
     }
   };
 
   return (
-    <div className="auth-container">
-      <h1>Wafer Todo</h1>
-      <p>Register</p>
-      <form onSubmit={handleRegister}>
-        <input
-          type="text"
-          placeholder="Username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button type="submit">{isLoading ? "Registering..." : "Register"}</button>
-        <Link to="/login">Already have an account? Login</Link>
-      </form>
+    <div className="auth-page">
+      <div className="auth-container">
+        <h1>Wafer Todo</h1>
+        <p>Register</p>
+        <form onSubmit={handleRegister}>
+          <input
+            type="text"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button type="submit">{isLoading ? "Registering..." : "Register"}</button>
+          <Link to="/login">Already have an account? Login</Link>
+        </form>
+      </div>
     </div>
   );
 };

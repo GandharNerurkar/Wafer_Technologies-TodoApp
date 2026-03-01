@@ -41,7 +41,7 @@ const AddTaskbtn = ({ filter, onFilterChange, onSearchChange }: AddTaskbtnProps)
         </div>
         <div className="add-task">
           <Link to="/add-task" className="add-task-btn">
-            + Add New Task
+            + Add Task
           </Link>
         </div>
       </div>
