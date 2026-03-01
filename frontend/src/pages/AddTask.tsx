@@ -15,7 +15,6 @@ const AddTask = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Validate form data
     if (!validateForm(formData)) return;
 
     try {

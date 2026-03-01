@@ -17,7 +17,7 @@ const Home = () => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const res = await api.get("/tasks"); // GET /api/tasks
+        const res = await api.get("/tasks");
         setTasks(res.data.data);
       } catch (error) {
         console.error("Error fetching tasks", error);
