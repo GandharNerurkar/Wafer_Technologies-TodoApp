@@ -57,7 +57,6 @@ Related files:
 ### 1. Clone the repository
 ```bash
 git clone https://github.com/GandharNerurkar/Wafer_Technologies-TodoApp.git
-cd Wafer_Technologies-TodoApp
 ```
 
 ### 2. Setup backend
@@ -101,7 +100,7 @@ Frontend runs on `http://localhost:5173`.
 ## API Endpoints
 
 ### Auth
-- `POST /api/auth/register` - Register new user
+- `POST /api/auth/register` - Register user
 - `POST /api/auth/login` - Login user
 
 ### Tasks (Protected)
