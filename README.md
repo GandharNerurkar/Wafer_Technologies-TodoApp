@@ -1,4 +1,4 @@
-# Wafer Technologies - Task Management App
+# Wafer Technologies - To-do List App
 
 ## Live Demo
 [WaferTodo Live](https://wafer-technologies-todo-app.vercel.app/)
