@@ -15,7 +15,7 @@ declare global {
 import { isValidObjectId, isValidStatus, sanitizeInput } from "../utils/helper";
 let taskStatus: "completed" | "incomplete" = "incomplete";
 
-// Get all tasks ================================================================
+// Get all tasks
 export const getTasks = async (req: Request, res: Response): Promise<void> => {
   try {
     const tasks = await Task.find({ user: req.userId }).sort({ createdAt: -1 });
@@ -34,7 +34,7 @@ export const getTasks = async (req: Request, res: Response): Promise<void> => {
   }
 };
 
-// Add new task ============================================================================
+// Add new task
 export const addTask = async (req: Request, res: Response): Promise<void> => {
   try {
     const { name, description, status } = req.body;
@@ -134,7 +134,7 @@ export const addTask = async (req: Request, res: Response): Promise<void> => {
   }
 };
 
-// Update task =================================================================================
+// Update task
 export const updateTask = async (
   req: Request,
   res: Response

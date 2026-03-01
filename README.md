@@ -137,6 +137,5 @@ Wafer_Technologies-TodoApp/
 `-- README.md
 ```
 
-## Author
 Gandhar Nerurkar
 - GitHub: <https://github.com/GandharNerurkar>

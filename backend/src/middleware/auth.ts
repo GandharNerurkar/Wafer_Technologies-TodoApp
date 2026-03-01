@@ -9,7 +9,6 @@ export const protect = (req: Request, res: Response, next: NextFunction) => {
     try {
       const decoded = jwt.verify(token, process.env.JWT_SECRET || "test");
       if (typeof decoded === "object" && decoded !== null && "id" in decoded) {
-        // @ts-ignore
         req.userId = (decoded as jwt.JwtPayload).id;
         next();
       } else {
