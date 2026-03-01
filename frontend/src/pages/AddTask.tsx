@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import api from "../services/api";
 import toast from "react-hot-toast";
 import { validateForm } from "../utils/validate";
 
 const AddTask = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     description: "",
@@ -21,6 +22,7 @@ const AddTask = () => {
       const res = await api.post("/tasks", formData);
       setFormData({ name: "", description: "", status: "incomplete" });
       toast.success(res.data.message);
+      navigate('/');
     } catch (error) {
       toast.error("Failed to add task.");
     }
@@ -128,3 +130,4 @@ const AddTask = () => {
 };
 
 export default AddTask;
+
