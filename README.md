@@ -1,13 +1,9 @@
-# WaferTodo - Task Management App
-
-A simple and clean Todo application built with the MERN stack and TypeScript.
-Users can register, login, create, update, delete, search, and filter tasks.
-Authentication is handled with JWT, and only logged-in users can manage their own tasks.
+# Wafer Technologies - Task Management App
 
 ## Live Demo
 [WaferTodo Live](https://wafer-technologies-todo-app.vercel.app/)
 
-## Tech Stack
+## Tech Stack Used
 
 ### Frontend
 - React + TypeScript
@@ -27,9 +23,9 @@ Authentication is handled with JWT, and only logged-in users can manage their ow
 - Nodemon + ts-node (dev server)
 
 ### Hosting
+- Database: MongoDB Atlas
 - Frontend: Vercel
 - Backend: Render
-- Database: MongoDB Atlas
 
 ## Features
 - User authentication (Register/Login)
